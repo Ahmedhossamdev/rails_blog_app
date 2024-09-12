@@ -1,83 +1,125 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* variables */
+
+$gray-medium-light: #eaeaea;
+
 /* universal */
 
+$light-gray: #777;
+
 html {
-    overflow-y: scroll;
+  overflow-y: scroll;
 }
 
 body {
-    padding-top: 60px;
+  padding-top: 60px;
 }
 
 section {
-    overflow: auto;
+  overflow: auto;
 }
 
 textarea {
-    resize: vertical;
+  resize: vertical;
+}
+
+/* typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
 }
 
 .center {
-    text-align: center;
-}
+  text-align: center;
 
-.center h1 {
+  h1 {
     margin-bottom: 10px;
+  }
 }
 
 /*  hearder */
 
 #logo {
-    float: left;
-    margin-right: 10px;
-    font-size: 1.7em;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    padding-top: 9px;
-    font-weight: bold;
-}
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
 
-#logo:hover {
+  &:hover {
     color: #fff;
     text-decoration: none;
+  }
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #222;
+  color: #222;
 }
-
 
 /* footer */
 
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid $gray-medium-light;
   color: #777;
-}
 
-footer a {
-  color: #555;
-}
+  a {
+    color: $gray-light;
 
-footer a:hover {
-  color: #222;
-}
+    &:hover {
+      color: $gray-darker;
+    }
+  }
 
-footer small {
-  float: left;
-}
+  a:hover {
+    color: #222;
+  }
 
-footer ul {
-  float: right;
-  list-style: none;
-}
+  small {
+    float: left;
+  }
 
-footer ul li {
-  float: left;
-  margin-left: 15px;
-}
+  ul {
+    float: right;
+    list-style: none;
+  }
 
+  ul li {
+    float: left;
+    margin-left: 15px;
+  }
+}
