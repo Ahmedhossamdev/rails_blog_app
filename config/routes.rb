@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   get "help" => "static_pages#help"
   get "about" => "static_pages#about"
   get "contact" => "static_pages#contact"
-
-
   get "signup" => "users#new"
+
+
+  resources :users
 
 
 
@@ -21,7 +22,4 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-
-  get '/signup', to: 'users#new'
-
 end
