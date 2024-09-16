@@ -15,6 +15,7 @@ document.addEventListener("turbo:load", function() {
 
     event.preventDefault();
     let menu = document.querySelector("#dropdown-menu");
+    console.log(menu);
     menu.classList.toggle("active");
   });
 });
