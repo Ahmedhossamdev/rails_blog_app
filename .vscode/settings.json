@@ -1,3 +1,6 @@
 {
-    "scm.showHistoryGraph": false
+    "scm.showHistoryGraph": false,
+    "solargraph.autoformat": true,
+    "solargraph.diagnostics": true,
+    "solargraph.formatting": true,
 }
