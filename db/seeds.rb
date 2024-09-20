@@ -8,17 +8,22 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-# Create admin user if it doesn't exist
-admin_email = 'admin@example.com'
-
-unless User.exists?(email: admin_email)
-  User.create!(
-    name: 'Admin User',
-    email: admin_email,
-    password: 'adminpassword123',
-    password_confirmation: 'adminpassword123'
+User.create!(
+  name: "Admin User",
+  email: "admin@gmail.com",
+  password: "password",
+  password_confirmation: "password",
+  admin: true
   )
-  puts 'Admin user created!'
-else
-  puts 'Admin user already exists.'
+
+99.times do |n|
+  name = Faker::Name.name
+  email = "example-#{n + 1}@rails.com"
+
+  User.create!(
+    name: name,
+    email: email,
+    password: "password",
+    password_confirmation: "password"
+  )
 end

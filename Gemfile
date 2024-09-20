@@ -23,6 +23,9 @@ gem "bootstrap-sass", "~> 3.4.1"
 
 gem "pg"
 
+
+gem "faker"
+
 gem "dotenv-rails", groups: [ :development, :test ]
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
@@ -39,11 +42,17 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+gem "bootstrap-will_paginate", "1.0.0"
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
 gem "rails-controller-testing"
 
+gem "will_paginate", "3.3.1"
+
+
+gem "kaminari", "~> 1.2.1"
 
 gem "bcrypt", "~> 3.1.7"
 
@@ -61,6 +70,8 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+
+  gem "htmlbeautifier"
 end
 
 group :test do
