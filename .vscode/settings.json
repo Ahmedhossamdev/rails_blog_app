@@ -3,4 +3,8 @@
     "solargraph.autoformat": true,
     "solargraph.diagnostics": true,
     "solargraph.formatting": true,
+
+    "files.associations": {
+        "*.html.erb": "erb"
+    }
 }
