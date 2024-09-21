@@ -21,7 +21,8 @@ gem "sassc-rails"
 
 gem "bootstrap-sass", "~> 3.4.1"
 
-gem "pg"
+gem "pg", "~> 1.5"
+
 
 
 gem "faker"

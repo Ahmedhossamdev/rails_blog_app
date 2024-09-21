@@ -339,7 +339,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   kaminari (~> 1.2.1)
-  pg
+  pg (~> 1.5)
   puma (>= 5.0)
   rails (~> 7.2.1)
   rails-controller-testing
