@@ -11,6 +11,8 @@ module SimpleApp
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.2
     config.autoloader = :classic
+    config.active_support.key_generator_hash_digest_class = OpenSSL::Digest::SHA1
+
 
 
     # Please, add to the `ignore` list any other `lib` subdirectories that do
