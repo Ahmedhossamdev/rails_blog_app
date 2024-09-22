@@ -45,7 +45,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              'smtp-relay.brevo.com',
     port:                 587,
-    domain:               'example.com',
+    domain:               host,
     user_name:            'ahmedhossamdev1@gmail.com',
     password:             'xsmtpsib-0aa440c5937891e14e417de0f86f195b2237bdcf18e0b9f4af6528b418300ca9-ZPmTDyUnOM6RrXAp',
     authentication:       'plain',
