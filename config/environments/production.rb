@@ -37,6 +37,21 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for Apache
   # config.action_dispatch.x_sendfile_header = "X-Accel-Redirect" # for NGINX
 
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  host = "https://simpleapp-production-2ad9.up.railway.app"
+  config.action_mailer.default_url_options = { host: host, protocol: "https" }
+
+  config.action_mailer.smtp_settings = {
+    address:              'smtp-relay.brevo.com',
+    port:                 587,
+    domain:               'example.com',
+    user_name:            'ahmedhossamdev1@gmail.com',
+    password:             'xsmtpsib-0aa440c5937891e14e417de0f86f195b2237bdcf18e0b9f4af6528b418300ca9-ZPmTDyUnOM6RrXAp',
+    authentication:       'plain',
+    enable_starttls_auto: true
+  }
+
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 
