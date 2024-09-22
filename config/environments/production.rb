@@ -48,6 +48,7 @@ Rails.application.configure do
   user_name:            ENV['SMTP_USERNAME'],
   password:             ENV['SMTP_PASSWORD'],
   authentication:       'login',
+  domain:               'railway.app',
   enable_starttls_auto: true
   }
 
