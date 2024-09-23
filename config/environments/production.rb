@@ -43,14 +43,14 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: host, protocol: "https" }
 
   ActionMailer::Base.smtp_settings = {
-      address: ENV["SMTP_ADDRESS"],
-      port: ENV["SMTP_PORT"],
-      authentication: :plain,
-      user_name: ENV["SMTP_USERNAME"],
-      password: ENV["SMTP_PASSWORD"],
-      domain: "railway.app",
-      enable_starttls_auto: true
-    }
+    address: "smtp.sendgrid.net",
+    port: "587",
+    authentication: :plain,
+    user_name: "apikey",
+    password: ENV["SMTP_PASSWORD"],
+    domain: "railway.app",
+    enable_starttls_auto: true
+  }
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
