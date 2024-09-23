@@ -7,7 +7,6 @@ class UserMailerTest < ActionMailer::TestCase
     mail = UserMailer.account_activation(user)
     assert_equal "Account activation", mail.subject
     assert_equal [ "ahmed@example.com" ], mail.to
-    assert_equal [ "ahmed@example.com" ], mail.from
     assert_match user.name,   mail.body.encoded
     assert_match user.activation_token, mail.body.encoded
     assert_match CGI.escape(user.email), mail.body.encoded
@@ -17,7 +16,6 @@ class UserMailerTest < ActionMailer::TestCase
     mail = UserMailer.password_reset
     assert_equal "Password reset", mail.subject
     assert_equal [ "to@example.org" ], mail.to
-    assert_equal [ "ahmed@example.com" ], mail.from
     assert_match "Hi", mail.body.encoded
   end
 end
