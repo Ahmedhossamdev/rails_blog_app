@@ -4,6 +4,8 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer. account_activation.subject
   #
+  default from: "ahmed@onebusaway.org"
+
   def account_activation(user)
     @user = user
 
