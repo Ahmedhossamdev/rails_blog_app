@@ -2,4 +2,4 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import "./custom/menu.js"
-
+import "./custom/image_upload.js"
