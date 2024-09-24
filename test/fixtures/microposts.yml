@@ -27,4 +27,14 @@ two:
 three:
   content: "This is the second micropost."
   created_at: <%= 3.years.ago %>
+  user: hacker
+
+
+
+
+<% 30.times do |n| %>
+micropost_<%= n %>:
+  content: <%= Faker::Lorem.sentence(word_count: 5) %>
+  created_at: <%= 42.days.ago %>
   user: ahmed
+<% end %>
