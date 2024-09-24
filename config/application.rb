@@ -12,6 +12,7 @@ module SimpleApp
     config.load_defaults 7.2
     config.autoloader = :classic
     config.active_support.key_generator_hash_digest_class = OpenSSL::Digest::SHA1
+    config.active_storage.variant_processor = :mini_magick
 
 
 

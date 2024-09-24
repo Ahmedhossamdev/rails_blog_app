@@ -54,7 +54,15 @@ gem "kaminari", "~> 1.2.1"
 
 gem "bcrypt", "~> 3.1.7"
 
-gem "pg"
+
+gem "active_storage_validations"
+
+
+gem "image_processing"
+
+group :production do
+  gem "aws-sdk-s3", "1.114.0", require: false
+end
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
