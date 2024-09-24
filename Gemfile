@@ -60,6 +60,8 @@ gem "active_storage_validations"
 
 gem "image_processing"
 
+gem "pg"
+
 group :production do
   gem "aws-sdk-s3", "1.114.0", require: false
 end
