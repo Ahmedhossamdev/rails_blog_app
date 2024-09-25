@@ -1,0 +1,15 @@
+one:
+  follower: ahmed
+  followed: lana
+
+two:
+  follower: ahmed
+  followed: malory
+
+three:
+  follower: lana
+  followed: ahmed
+
+four:
+  follower: hacker
+  followed: ahmed
