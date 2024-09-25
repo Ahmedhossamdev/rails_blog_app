@@ -21,4 +21,10 @@ Rails.application.routes.draw do
   get "/microposts", to: "static_pages#home"
   get "/microposts/:id", to: "microposts#destroy"
   resources :relationships,       only: [ :create, :destroy ]
+
+  resources :notifications, only: [ :index ] do
+    member do
+      patch :mark_as_read
+    end
+  end
 end
