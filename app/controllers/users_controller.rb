@@ -25,7 +25,11 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
-    @notifications = @user.notifications.where(read: false)
+    if current_user == @user
+      @notifications = @user.notifications.where(read: false)
+    else
+      @notifications = []
+    end
   end
 
   def edit
