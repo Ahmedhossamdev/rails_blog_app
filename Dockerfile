@@ -19,6 +19,7 @@ RUN apt-get update -qq && \
         libvips \
         sqlite3 \
         libpq-dev && \
+        imagemagick && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # Set production environment
