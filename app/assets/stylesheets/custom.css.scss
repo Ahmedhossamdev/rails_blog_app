@@ -348,3 +348,38 @@ span.image {
   padding: 0;
 }
 
+
+
+
+
+.notifications {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+
+  h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #333;
+  }
+
+  .notification {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
