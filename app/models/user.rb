@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  # Relationships
   has_many :microposts, dependent: :destroy
   has_many :active_relationships, class_name:  "Relationship",
                                   foreign_key: "follower_id",
@@ -11,9 +12,14 @@ class User < ApplicationRecord
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
 
+  has_many :notifications, foreign_key: :user_id, dependent: :destroy
 
+
+  # Attributes
   attr_accessor :remember_token, :activation_token, :reset_token
 
+
+  # Callbacks
   before_save   :downcase_email
   before_create :create_activation_digest
 
@@ -23,6 +29,7 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
+  # Password
   has_secure_password
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
