@@ -2,6 +2,5 @@
 import "controllers"
 import "custom/menu"
 import "custom/image_upload"
-//= require rails-ujs
 import { Turbo } from "@hotwired/turbo-rails"
 Turbo.session.drive = false
