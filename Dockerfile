@@ -18,7 +18,7 @@ RUN apt-get update -qq && \
         libjemalloc2 \
         libvips \
         sqlite3 \
-        libpq-dev && \
+        libpq-dev \
         imagemagick && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
